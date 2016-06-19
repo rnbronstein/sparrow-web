@@ -1,3 +1,4 @@
-<h2 id="title">Welcome to Ember</h2>
-
+{{#if session.isAuthenticated}}
+Hello, {{sessionAccount.account.name}}
+{{/if}}
 {{outlet}}

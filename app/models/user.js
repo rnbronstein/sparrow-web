@@ -4,5 +4,8 @@ import { hasMany } from 'ember-data/relationships';
 
 export default Model.extend({
   name: attr(),
-  diagnoses: hasMany('diagnosis')
+  email: attr(),
+  password: attr(), 
+  diagnoses: hasMany('diagnosis'),
+  entries: hasMany('entry')
 });

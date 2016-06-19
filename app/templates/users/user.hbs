@@ -1,5 +1,12 @@
-{{model.name}}
-{{#each model.diagnoses as |diagnosis|}}
-  {{dianosis.diagnosis}}
-{{/each}}
+<h2>{{model.name}}</h2>
+<ul>
+  {{#each model.diagnoses as |diagnosis|}}
+  <li>{{diagnosis.diagnosis}}</li>
+  <ul>
+    {{#each diagnosis.entries as |entry|}}
+    <li>{{entry.time}}: {{entry.value}}</li>
+    {{/each}}
+  </ul>
+  {{/each}}
+</ul>
 {{outlet}}

@@ -1,0 +1,6 @@
+<h4>Your recent {{model.diagnosis}} health trends</h4>
+
+<ul>{{#each model.entries as |entry|}}
+  <li>{{entry.time}}: {{entry.value}}</li>
+{{/each}}
+</ul>
