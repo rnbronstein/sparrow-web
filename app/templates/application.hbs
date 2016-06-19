@@ -1,1 +1,4 @@
+{{#if session.isAuthenticated}}
+Hello, {{sessionAccount.account.name}}
+{{/if}}
 {{outlet}}
