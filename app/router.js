@@ -7,9 +7,13 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('users', function(){
-    this.route('user', { path: ':user_id'}, function(){
+    this.route('user', { path: ':user_id'});
+  });
+  this.route('diagnoses', function(){
+    this.route('diagnosis', { path: ':diagnosis_id'}, function(){
       this.route('entries', function(){
         this.route('new');
+        this.route('index');
       });
     });
   });
