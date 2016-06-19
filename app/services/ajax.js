@@ -1,6 +1,6 @@
-import Ember from 'ember';
-import AjaxService from 'ember-ajax/services/ajax';
-export default AjaxService.extend({
-  host:
-   'localhost:3000/api/v1'
-});
+// import Ember from 'ember';
+// import AjaxService from 'ember-ajax/services/ajax';
+// export default AjaxService.extend({
+//   host:
+//    'localhost:3000/api/v1'
+// });
