@@ -1,11 +1,14 @@
-<h1>Current user: {{model.name}}</h1>
-<h3>this is '/home'</h3>
+<h3>Your recent health trends</h3>
 <div class="chart-container">
   {{time-series-chart
-    barData=timeSeriesData
     lineData=timeSeriesData
     selectedInterval=interval
     yAxisFromZero=fromZero
+    selectedSeedColor=color
+    hasXAxisTitle=xAxisTitle
+    hasYAxisTitle=yAxisTitle
+    xValueDisplayName=xDisplayName
+    yValueDisplayName=yDisplay
   }}
 </div>
 {{outlet}}
