@@ -5,6 +5,7 @@ export default Ember.Route.extend(UnauthenticatedRouteMixin, {
 
   beforeModel: function(){
     let controller = this.controllerFor(this.routeName);
+    debugger
     controller.set('errorMessage', null)
   }
 
