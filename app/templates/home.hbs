@@ -1,5 +1,11 @@
 <h1>Current user: {{model.name}}</h1>
-
+<h3>this is '/home'</h3>
 <div class="chart-container">
-  {{time-series-chart data=timeSeriesData}}
+  {{time-series-chart
+    barData=timeSeriesData
+    lineData=timeSeriesData
+    selectedInterval=interval
+    yAxisFromZero=fromZero
+  }}
 </div>
+{{outlet}}

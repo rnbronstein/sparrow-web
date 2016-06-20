@@ -1,5 +1,8 @@
 import Ember from 'ember';
+
 export default Ember.Controller.extend({
   applicationController: Ember.inject.controller('application'),
-  timeSeriesData: Ember.computed.reads('applicationController.timeSeriesData')
+  timeSeriesData: Ember.computed.reads('applicationController.timeSeriesData'),
+  interval: 'D',
+  fromZero: true
  });
