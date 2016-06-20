@@ -1,4 +1,7 @@
-{{#if session.isAuthenticated}}
-Hello, {{sessionAccount.account.name}}
-{{/if}}
-{{outlet}}
+<div class="container">
+  {{#if session.isAuthenticated}}
+  Hello, {{sessionAccount.account.name}}
+  {{/if}}
+  <a href="/home">home</a>
+  {{outlet}}
+</div>

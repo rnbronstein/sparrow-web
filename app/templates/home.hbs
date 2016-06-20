@@ -1,0 +1,14 @@
+<h3>Your recent health trends</h3>
+<div class="chart-container">
+  {{time-series-chart
+    lineData=timeSeriesData
+    selectedInterval=interval
+    yAxisFromZero=fromZero
+    selectedSeedColor=color
+    hasXAxisTitle=xAxisTitle
+    hasYAxisTitle=yAxisTitle
+    xValueDisplayName=xDisplayName
+    yValueDisplayName=yDisplay
+  }}
+</div>
+{{outlet}}
