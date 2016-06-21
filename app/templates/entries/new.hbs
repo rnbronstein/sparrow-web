@@ -1,0 +1,17 @@
+<div class="col-md-5">
+  <form class="form-horizontal">
+    <label for="diagnosis">Diagnosis:</label>
+    {{simple-select
+      content=allDiagnoses
+      optionValuePath="id"
+      optionLabelPath="diagnosis"
+      select=currentlySelectedObject
+      value=model.value
+      prompt="Please select diagnosis"
+      action=save}}
+    <label for="value">Current pain:</label>
+    {{input value=model.value id='value'}}
+
+    <button {{action 'save' model}} id='submit'>Save</button>
+  </form>
+</div>
