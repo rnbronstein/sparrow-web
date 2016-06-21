@@ -1,14 +1,18 @@
 <h4>View & Edit Recent Logs</h4>
-<table>
+<table class='table table-hover'>
   <tr>
     <th>Date</th>
     <th>Diagnosis</th>
     <th>Pain Level</th>
   </tr>
+  <tbody>
   {{#each model as |entry|}}
     <tr>
-      {{show-entries saveChanges=(action "update") entry=entry}}
+      <td id='time'>{{moment-format entry.time 'MMMM Do YYYY, h:mm:ss a'}}</td>
+      <td id='diagnosis'>{{entry.diagnosis.diagnosis}}</td>
+      <td id="value">{{show-entries saveChanges=(action "update") entry=entry}}</td>
     </tr>
   {{/each}}
+  </tbody>
 </table>
 {{outlet}}

@@ -1,9 +1,7 @@
-<td id='time'>{{moment-format entry.time}}</td>
-<td id='diagnosis'>{{entry.diagnosis.diagnosis}}</td>
 
 {{#if isEditing}}
-<td>{{input value=entry.value id='value'}}</td>
+{{input value=entry.value}}
 <button {{action 'save'}} id="submit" class="btn btn-primary">Save</button>
 {{else}}
-<td id='value'>{{entry.value}}</td>
+{{entry.value}}
 {{/if}}
