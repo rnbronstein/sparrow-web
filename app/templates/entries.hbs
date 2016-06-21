@@ -9,8 +9,8 @@
   {{#each model as |entry|}}
     <tr>
       <td id='time'>{{moment-format entry.time 'MMMM Do YYYY, h:mm:ss a'}}</td>
-      <td id='diagnosis'>{{entry.diagnosis.diagnosis}}</td>
-      <td id="value">{{show-entries saveChanges=(action "update") entry=entry}}</td>
+      <td id='diagnosis'>{{edit-diagnosis-entries saveChanges=(action "update") entry=entry}}</td>
+      <td id="value">{{edit-entries saveChanges=(action "update") entry=entry}}</td>
     </tr>
   {{/each}}
   </tbody>
