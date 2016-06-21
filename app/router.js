@@ -10,14 +10,7 @@ Router.map(function() {
     this.route('user', { path: ':user_id'});
   });
   this.route('login');
-  this.route('diagnoses', function(){
-    this.route('diagnosis', { path: ':diagnosis_id'}, function(){
-      this.route('entries', function(){
-        this.route('new');
-        this.route('index');
-      });
-    });
-  });
+  this.route('entries');
   this.route('home');
 });
 
