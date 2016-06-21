@@ -1,0 +1,8 @@
+<div class="col-md-5">
+  <form class="form-horizontal">
+    <label for="value">Current pain:</label>
+    {{input value=model.value id='value'}}
+
+    <button {{action 'save' model}} id='submit'>Save</button>
+  </form>
+</div>

@@ -14,13 +14,15 @@ export default Ember.Controller.extend({
         result.push(diag)
       })
     })
-      // // setFormattedTime(response){
-      //   for (var obj in response){
-      //     var t = obj.time;
-      //     obj.time = new Date(t);
-      //   };
-      // };
-      this.set('timeSeriesData', result);
+    this.set('timeSeriesData', result);
     });
+  },
+  actions: {
+    authenticate: function(credentials) {
+      var authenticator = 'authenticator:jwt';
+      this.get('session').authenticate(authenticator, credentials).catch((reason)=>{
+        this.set('errorMessage', reason.error || reason);
+      });
+    }
   }
 });
