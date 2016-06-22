@@ -1,0 +1,6 @@
+{{#if isEditing}}
+{{input value=entry.value}}
+<button {{action 'save'}} id="submit" class="btn btn-primary">Save</button>
+{{else}}
+{{entry.value}}
+{{/if}}

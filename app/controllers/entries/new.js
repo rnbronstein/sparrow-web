@@ -8,7 +8,6 @@ export default Ember.Controller.extend({
   actions: {
     save(){
       let entry = this.get('model');
-      debugger;
       entry.set('diagnosis', this.get('selection'));
       entry.set('value', this.get('value'))
       entry.save();
