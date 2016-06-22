@@ -7,7 +7,7 @@ export default Ember.Component.extend({
   actions: {
     save() {
       this.toggleProperty('isEditing');
-      this.attrs.saveChanges(this.get('entry'));
+      this.attrs.saveDiagnosisChanges(this.get('diagnosis'));
     }
   },
   isEditing: false

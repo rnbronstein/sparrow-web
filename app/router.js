@@ -9,8 +9,11 @@ Router.map(function() {
   this.route('users', function(){
     this.route('user', { path: ':user_id'});
   });
+  this.route('diagnoses')
   this.route('login');
-  this.route('entries');
+  this.route('entries', function(){
+    this.route('new');
+  });
   this.route('home');
 });
 
