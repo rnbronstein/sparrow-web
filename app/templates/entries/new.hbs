@@ -5,12 +5,11 @@
       content=allDiagnoses
       optionValuePath="id"
       optionLabelPath="diagnosis"
-      select=currentlySelectedObject
-      value=model.value
-      prompt="Please select diagnosis"
-      action=save}}
+      selection=currentlySelectedObject
+      model.diagnosisValue=currentlySelectedValue
+      prompt="Please select diagnosis"}}
     <label for="value">Current pain:</label>
-    {{input value=model.value id='value'}}
+    {{input value=model.entryValue id='entryValue'}}
 
     <button {{action 'save' model}} id='submit'>Save</button>
   </form>
